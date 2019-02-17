@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "rabbit-ucenter-server",fallback = SysUserServerFallbackImpl.class)
 public interface SysUserServer {
 
-    @GetMapping(value = "/ucenter/user/getSysUserVoByLogin")
+    @GetMapping(value = {"/ucenter/user/getSysUserVoByLogin"})
     R getSysUserVoByLogin(@RequestParam("loginName")String loginName,@RequestParam("password") String password);
 
 }
