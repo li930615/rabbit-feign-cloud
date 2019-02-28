@@ -16,5 +16,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface SysAppServer {
 
     @GetMapping(value = {"/ucenter/app/getByCode"})
-    SysApp getByCode(@RequestParam("code") String paramString);
+    SysApp getByCode(@RequestParam("code") String code);
 }
